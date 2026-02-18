@@ -7,7 +7,7 @@ This is one of my proof-of-concept apps, and I hope it contributes to the ongoin
 # What is a User Rejected Soft Fork?
 It is a soft fork written in response to another, to fight against a bad idea. If soft fork A enforces rule X, a URSF against soft fork A enforces rule "not X." In this case, BIP110 requires miners to put certain things in their blocks (more details below), so this URSF requires them "not" to put those things in their blocks.
 
-# What does this software do?
+# What does this software do, specifically?
 It has two modes: regtest and mainnet. On regtest mode, it does the following things:
 - connects to your bitcoin node
 - tells you how to signal to your local network that you are running this software
