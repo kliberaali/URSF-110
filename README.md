@@ -38,7 +38,7 @@ That said, if you *do* run this software on mainnet (and assuming it works), it 
 Again, YOU CAN LOSE MONEY by running this software. Do not run it on mainnet unless you are one of the people in the exceptional categories listed above. And even then, consider just running it on regtest.
 
 # Why did you make it?
-To stop BIP110.
+To stop [BIP110](https://bip110.org/).
 
 # Why do you dislike BIP110?
 BIP110 does two bad things. First, in certain circumstances, it freezes the funds of wallets that use the [miniscript](https://bitcoin.sipa.be/miniscript/) language in a certain way. Miniscript is a bitcoin smart contracting language with a bunch of built in functions, and it is designed to "compile" a bitcoin wallet that uses one or more of those functions as selected by users and/or developers. Some of those functions sometimes violate one of BIP110's proposed rules (the rule against using the OP_IF function in taproot wallets), which could cause users of some miniscript wallets to lose funds, depending on how they use it.
