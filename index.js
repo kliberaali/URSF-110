@@ -4,6 +4,7 @@ var readline = require( 'readline' );
 globalThis.crypto = crypto;
 var tapscript = require( '@cmdcode/tapscript' );
 var waitSomeTime = num => new Promise( resolve => setTimeout( resolve, num ) );
+var bytesToHex = bytes => bytes.reduce( ( str, byte ) => str + byte.toString( 16 ).padStart( 2, "0" ), "" );
 var getRand = num => bytesToHex( crypto.getRandomValues( new Uint8Array( num ) ) );
 var prompt = question => {
     var rl = readline.createInterface({
@@ -37,7 +38,6 @@ var queryCore = async ( method, params = [], rpc_hostname, rpc_port, rpc_usernam
 
 //mining dependencies
 var hexToBytes = hex => Uint8Array.from( hex.match( /.{1,2}/g ).map( byte => parseInt( byte, 16 ) ) );
-var bytesToHex = bytes => bytes.reduce( ( str, byte ) => str + byte.toString( 16 ).padStart( 2, "0" ), "" );
 var reverseHexString = s => s.match( /[a-fA-F0-9]{2}/g ).reverse().join( '' );
 var hexToBinary = hex => {
     var array_hex = hex.match( /\w{2}/g );
