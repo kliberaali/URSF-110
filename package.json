@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@cmdcode/tapscript": "^1.5.3"
+  }
+}
